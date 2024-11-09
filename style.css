@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Lato', sans-serif;
-    line-height: 1.6;
+    line-height: normal;
     color: #2E4C6E;
     background-color: #f7f7f7;
 }
@@ -16,19 +16,18 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    margin-bottom: 15px;
     color: #2E4C6E;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
+h1 { font-size: 96px; }
+h2 { font-size: 72px; }
 h3 { font-size: 1.75rem; }
-h4 { font-size: 1.5rem; }
+h4 { font-size: 24px; font-weight: 500; }
+h5 { font-size: 20px;}
 
 /* Container */
 .container {
     width: 90%;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -72,17 +71,38 @@ nav ul li a:hover {
 .hero {
     background: linear-gradient(135deg, #3498db, #2980b9);
     color: #f7f7f7;
-    text-align: center;
     padding: 100px 0;
     background-image: url(images/landing_img.png);
     background-size: cover;
-    width: 1440px;
-    height: 848px;
+    background-repeat: inherit;
     flex-shrink: 0;
 }
 
 .hero h2 {
     margin-bottom: 20px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+}
+
+.about-img {
+    transition: transform 0.3s ease;
+}
+
+.about-img:hover {
+    transform: translateY(-10px);
+}
+
+.about-text {
+    margin: 80px;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
 }
 
 .btn {
@@ -119,11 +139,13 @@ nav ul li a:hover {
 .feature-card {
     flex-basis: 30%;
     background-color: #f7f7f7;
-    padding: 30px;
+    padding: 24px;
+    gap: 24px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 2px 4px 16px 0px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s ease;
+    
 }
 
 .feature-card:hover {
